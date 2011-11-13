@@ -27,7 +27,7 @@ abstract class AbstractConfigurableStream implements Stream
 	public function __construct($base = '', $settings = false, $protocol = 'file')
 	{
 		$this->base = $base;
-		$this->settings = $settings;
+		$this->settings = $settings ? $settings : array();
 		$this->protocol = $protocol;
 	}
 }
